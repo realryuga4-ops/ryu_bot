@@ -5,7 +5,6 @@ Handles environment variables, constants, and bot settings.
 
 import os
 from dotenv import load_dotenv
-from typing import Optional
 
 load_dotenv()
 
@@ -16,10 +15,6 @@ class Config:
     DISCORD_TOKEN: str = os.getenv("DISCORD_TOKEN", "")
     BOT_PREFIX: str = os.getenv("BOT_PREFIX", "b!")
     BOT_VERSION: str = os.getenv("BOT_VERSION", "1.0.0")
-    
-    # MongoDB Settings
-    MONGODB_URI: str = os.getenv("MONGODB_URI", "")
-    DATABASE_NAME: str = os.getenv("DATABASE_NAME", "bluemoon_bd")
     
     # Environment
     ENVIRONMENT: str = os.getenv("ENVIRONMENT", "development")
@@ -35,16 +30,16 @@ class Config:
     
     # Rarity Colors (Discord embeds)
     RARITY_COLORS = {
-        "common": 0x95A5A6,      # Gray
-        "rare": 0x3498DB,        # Blue
-        "epic": 0x9B59B6,        # Purple
-        "legendary": 0xF39C12,   # Orange/Gold
+        "common": 0x95A5A6,
+        "rare": 0x3498DB,
+        "epic": 0x9B59B6,
+        "legendary": 0xF39C12,
     }
     
     # Drop System Settings
     DROP_COOLDOWN_MINUTES: int = 10
-    DROP_CLAIM_TIMEOUT: int = 10  # seconds
-    
+    DROP_CLAIM_TIMEOUT: int = 10
+
     # Economy Settings
     STARTING_BALANCE: int = 1000
     DAILY_REWARD: int = 500
@@ -55,9 +50,6 @@ class Config:
         """Validate critical configuration values."""
         if not Config.DISCORD_TOKEN:
             print("❌ ERROR: DISCORD_TOKEN not set in .env file")
-            return False
-        if not Config.MONGODB_URI:
-            print("❌ ERROR: MONGODB_URI not set in .env file")
             return False
         return True
 
