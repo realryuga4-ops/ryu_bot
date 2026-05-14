@@ -75,8 +75,8 @@ class Utility(commands.Cog):
                     )
             
             embed.add_field(
-                name="🔗 Useful Links",
-                value="[Invite Bot](https://discord.com/oauth2/authorize?client_id=YOUR_BOT_ID&permissions=8&scope=bot%20applications.commands) | [Support Server](https://discord.gg/yourserver)",
+                name="⚙️ Bot Support",
+                value="[Official Discord Server](https://discord.gg/PH4yhPmb6Z)",
                 inline=False
             )
             
@@ -88,7 +88,7 @@ class Utility(commands.Cog):
     async def about(self, ctx: commands.Context):
         """Display bot information."""
         embed = create_embed(
-            title="About dc-bot 🎴",
+            title="About BlueMoon 🎴",
             description="A professional anime card Discord bot with economy system and card drops.",
             color=discord.Color.purple()
         )
