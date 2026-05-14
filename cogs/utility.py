@@ -74,11 +74,11 @@ class Utility(commands.Cog):
                         inline=False
                     )
             
-            embed.add_field(
-                name="⚙️ Bot Support",
-                value="[Official Discord Server](https://discord.gg/PH4yhPmb6Z)",
-                inline=False
-            )
+                embed.add_field(
+        name="⚙️ Bot Support",
+        value="[Official Discord Server](https://discord.gg/PH4yhPmb6Z)",
+        inline=False
+    )
             
             await ctx.send(embed=embed)
         
